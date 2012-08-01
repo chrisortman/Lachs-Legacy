@@ -1,0 +1,52 @@
+﻿@{
+    
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>@(Page.Title ?? "Lach's Legacy")</title>
+        <link type="text/css" rel="stylesheet" href="~/Content/bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="~/Content/bootstrap-responsive.min.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="span2">
+                    <!--Sidebar content-->
+                    <ul class="nav nav-list">
+                      <li class="nav-header">
+                        Fighting Sids in SD
+                      </li>
+                      <li>
+                        <a href="~/Default">Home</a>
+                      </li>
+                      <li>
+                        <a href="~/Services">Services</a>
+                      </li>
+                      <li>
+                        <a href="~/Donations">Donations</a>  
+                      </li>
+                      <li>
+                          <a href="~/Events">Events</a>
+                      </li>
+                      <li>
+                          <a href="#">Our Angels</a>
+                      </li>
+                    </ul>
+
+                </div>
+                <div class="span10">
+                <!--Body content-->
+                    @RenderBody()
+                </div>
+            </div>
+            @RenderSection("NewBodyRow",false)
+        </div>
+
+    </body>
+</html>
